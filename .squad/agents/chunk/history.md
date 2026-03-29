@@ -9,3 +9,10 @@
 ## Learnings
 
 <!-- Append new learnings below. Each entry is something lasting about the project. -->
+
+### 2026-03-29 — Initial QA Review
+- **Verified:** All spec requirements implemented correctly — core gameplay, visuals, technical requirements, and all stretch goals
+- **Edge cases tested:** 180° reversal prevention works correctly (checks current `direction` not `nextDirection`), food spawning validates against snake body, pause disabled during game over, speed increase has sensible floor
+- **Code quality:** Clean state machine with 4 states (start/playing/paused/gameOver), proper direction buffering prevents missed inputs, collision detection efficient and correct
+- **Pattern learned:** Direction buffering (`nextDirection` vs `direction`) is critical for responsive controls — queues input without allowing 180° exploits
+- **Result:** APPROVED — no bugs found, production-ready implementation
